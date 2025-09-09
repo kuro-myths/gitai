@@ -2,8 +2,16 @@
 
 > **Git + Ai (愛)** → Belajar GitHub dengan sentuhan cinta Jepang 🎌 
 
+---
+
 <p align="center">
-  <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" lebar="600" alt=" Sakura efek jatuh "/>
+  <!-- Banner Sakura -->
+  <img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" lebar="100%" alt=" Sakura Banner "/>
+</p>
+
+<p align="center">
+  <!-- Efek teks dinamis -->
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=F78DA7&center=true&vCenter=true&width=500&lines=Welcome+to+Gitai;Belajar+GitHub+dengan+Hati;Code+with+Love+%E2%9D%A4%EF%B8%8F" alt=" Mengetik SVG " />
 </p>
 
 ---
@@ -33,9 +41,17 @@ Gitai mengajarkan bahwa:
 ## 📜 Sejarah Awal Gitai
 Nama **Gitai** lahir dari sebuah pencarian sederhana: bagaimana menggabungkan dunia teknologi dengan nilai-nilai kehidupannya.  
 Awalnya hanya sebuah ide kecil untuk membuat tutorial GitHub, namun seiring waktu berkembang menjadi simbol perjalanan belajar.  
-**Git** mewakili dunia versi kontrol, disiplin, dan kolaborasi, sementara **Ai (愛)** dari Jepang melambangkan cinta, kesabaran, dan rasa hormat.  
+**Git** mewakili dunia version control, disiplin, dan kolaborasi, sementara **Ai (愛)** dari Jepang melambangkan cinta, kesabaran, dan rasa hormat.  
 Keduanya berpadu, membentuk filosofi baru: *belajar teknologi dengan hati*.  
 
+---
+
 <p align="center">
-  <img src="https://media.giphy.com/media/11lsmgqmfdpsNy/giphy.gif" lebar="500" alt="Cherry blossom falling"/>
+  <!-- Sakura jatuh -->
+  <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" lebar="600" alt=" Sakura Falling "/>
+</p>
+
+<p align="center">
+  <!-- Banner Sakura Bawah -->
+  <img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" lebar="100%" alt=" Sakura Banner "/>
 </p>
