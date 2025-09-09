@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>🌸 Gitai</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Fira Code", monospace;
+      text-align: center;
+      background: #fff0f5;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #e75480;
+      margin-top: 20px;
+    }
+    .typing {
+      font-size: 1.2em;
+      color: #ff4d6d;
+      font-weight: bold;
+      border-right: 2px solid #ff4d6d;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typing 4s steps(40, end) infinite alternate,
+                 blink 0.7s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: #ff4d6d }
+    }
+    /* Efek sakura jatuh */
+ .sakura {
+ posisi: tetap;
+ atas: -10px;
+ font-size: 24px;
+ animasi: jatuh linear tak terbatas;
+    }
+ @keyframes jatuh {
+ 0% { transform: translateY(0) rotate(0deg); opasitas: 1; }
+ 100% { transform: translateY(100vh) rotate(360deg); opasitas: 0; }
+    }
+ </gaya>
+</kepala>
+<badan>
+ <h1>🌸 Gitai</h1>
+ <p><b>Git + Ai (愛)</b> → Belajar GitHub dengan sentuhan cinta Jepang 🎌</p>
+
+ <div class="typing">Welcome to Gitai - Belajar dengan Hati ❤</div>
+
+ <h2>🚀 Apa itu Gitai?</h2>
+ <p>Gitai bukan sekadar nama. Ia adalah perpaduan antara teknologi dan filosofi:</p>
+ <ul>
+ <li><b>G</b> → Growth (pertumbuhan)</li>
+ <li><b>I</b> → Integrity (integritas)</li>
+ <li><b>T</b> → Tenacity (ketekunan)</li>
+ <li><b>A</b> → Adaptability (kemampuan beradaptasi)</li>
+ <li><b>I</b> → Innovation (inovasi)</li>
+ <li><b>愛 (Ai)</b> → Cinta, fondasi dari semua proses belajar</li>
+ </ul>
+
+ <h2>📖 Filosofi Gitai</h2>
+ <p>
+ Setiap commit adalah langkah kecil menuju kemajuan.<br>
+ Branching adalah pilihan jalan hidup.<br>
+ Merge adalah harmoni dari perbedaan.<br>
+ Error bukan kegagalan, melainkan guru terbalik.
+ </p>
+
+ <h2>📜 Sejarah Awal Gitai</h2>
+ <p>
+ Nama <b>Gitai</b> lahir dari sebuah pencarian sederhana: bagaimana menggabungkan dunia teknologi dengan nilai-nilai kehidupannya.<br>
+ Awalnya hanya sebuah ide kecil untuk membuat tutorial GitHub, namun seiring waktu berkembang menjadi simbol perjalanan belajar.<br>
+ <b>Git</b> mewakili dunia version control, disiplin, dan kolaborasi, sementara <b>Ai (愛)</b> dari Jepang melambangkan cinta, kesabaran, dan rasa hormat.<br>
+ Keduanya berpadu, membentuk filosofi baru: <i>belajar teknologi dengan hati</i>.
+ </p>
+
+ <!-- Sakura jatuh -->
+ <skrip>
+ function createSakura() {
+ const sakura = document.createElement('div');
+ sakura.classList.add('sakura');
+ sakura.style.left = Math.random() * window.innerWidth + 'px';
+ sakura.style.animationDuration = (5 + Math.random() * 5) + 's';
+ sakura.innerHTML = '🌸';
+ document.body.appendChild(sakura);
+ setTimeout(() => { sakura.remove(); }, 10000);
+    }
+ setInterval(createSakura, 300);
+ </skrip>
+</badan>
+</html>
