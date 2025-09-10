@@ -1,0 +1,125 @@
+# 📘 Tutorial Git & GitHub Dasar
+
+## 1. Install Git
+
+* Download Git dari: [https://git-scm.com/downloads](https://git-scm.com/downloads)
+* Install seperti biasa, lalu cek apakah berhasil dengan perintah:
+
+```bash
+git --version
+```
+
+Jika muncul versi git, berarti sudah berhasil.
+
+---
+
+## 2. Clone Repository (Download Project dari GitHub)
+
+Pilih folder kosong di komputer, lalu jalankan:
+
+```bash
+git clone https://github.com/username/nama-repo.git
+```
+
+Contoh nyata (repo `codeon`):
+
+```bash
+git clone https://github.com/kuro-myths/codeon.git
+```
+
+Setelah berhasil, akan muncul folder baru dengan nama repository.
+
+---
+
+## 3. Masuk ke Folder Repository
+
+Pindah ke folder yang sudah diclone:
+
+```bash
+cd codeon
+```
+
+Lalu buka dengan Visual Studio Code:
+
+```bash
+code .
+```
+
+---
+
+## 4. Edit / Tambah File
+
+* Edit file dengan VS Code.
+* Bisa juga menambahkan file baru ke dalam folder repository.
+
+---
+
+## 5. Simpan Perubahan ke GitHub
+
+Ada **3 langkah utama**:
+
+1. **Stage (git add)** → memasukkan perubahan ke *index* (seperti siap difoto).
+
+   ```bash
+   git add .
+   ```
+
+   `.` artinya semua file yang berubah.
+
+2. **Commit (git commit)** → memberi label / pesan perubahan.
+
+   ```bash
+   git commit -m "pesan perubahan"
+   ```
+
+   Contoh:
+
+   ```bash
+   git commit -m "edit README dan tambah hello world"
+   ```
+
+3. **Push (git push)** → mengirim commit dari lokal ke GitHub.
+
+   ```bash
+   git push origin main
+   ```
+
+---
+
+## 6. Hapus File di Lokal (tanpa hapus di GitHub)
+
+Kalau ingin menghapus file hanya di komputer lokal:
+
+* Tinggal hapus manual (Ctrl + A → Delete).
+* Jangan dijalankan `git add .` lalu `git commit` → karena itu akan menghapus juga di GitHub.
+
+Kalau ingin mengembalikan lagi file dari GitHub:
+
+```bash
+git pull origin main
+```
+
+---
+
+## 7. Alur Singkat GitHub
+
+🔁 Alurnya selalu urut:
+
+```
+git add .   → foto perubahan
+git commit -m "pesan" → simpan ke lokal
+git push origin main → upload ke GitHub
+```
+
+---
+
+## 8. Tips
+
+* Kalau salah hapus file, bisa download ulang dengan `git pull`.
+* Gunakan pesan commit yang jelas biar gampang lihat riwayat.
+* Bisa pakai VS Code tombol **Commit** dan **Sync/Push** kalau tidak mau ketik command.
+
+---
+
+👉 Dengan cara ini, kamu bisa kerja di lokal (VS Code), lalu sinkronisasi dengan GitHub kapanpun.
+
