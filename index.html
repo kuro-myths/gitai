@@ -1,99 +1,158 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>🌸 Gitai</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gitai · Effect Anime Keren</title>
+
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Fira Code", monospace;
-      text-align: center;
-      background: #fff0f5;
-      overflow-x: hidden;
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      height:100vh;
+      overflow:hidden;
+      background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+      font-family:"Segoe UI",sans-serif;
+      color:#fff;
     }
-    h1 {
-      font-size: 2.5em;
-      color: #e75480;
-      margin-top: 20px;
-    }
-    .typing {
-      font-size: 1.2em;
-      color: #ff4d6d;
-      font-weight: bold;
-      border-right: 2px solid #ff4d6d;
-      white-space: nowrap;
-      overflow: hidden;
-      display: inline-block;
-      animation: typing 4s steps(40, end) infinite alternate,
-                 blink 0.7s step-end infinite;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink {
-      from, to { border-color: transparent }
-      50% { border-color: #ff4d6d }
-    }
-    /* Efek sakura jatuh */
- .sakura {
- posisi: tetap;
- atas: -10px;
- font-size: 24px;
- animasi: jatuh linear tak terbatas;
-    }
- @keyframes jatuh {
- 0% { transform: translateY(0) rotate(0deg); opasitas: 1; }
- 100% { transform: translateY(100vh) rotate(360deg); opasitas: 0; }
-    }
- </gaya>
-</kepala>
-<badan>
- <h1>🌸 Gitai</h1>
- <p><b>Git + Ai (愛)</b> → Belajar GitHub dengan sentuhan cinta Jepang 🎌</p>
 
- <div class="typing">Welcome to Gitai - Belajar dengan Hati ❤</div>
-
- <h2>🚀 Apa itu Gitai?</h2>
- <p>Gitai bukan sekadar nama. Ia adalah perpaduan antara teknologi dan filosofi:</p>
- <ul>
- <li><b>G</b> → Growth (pertumbuhan)</li>
- <li><b>I</b> → Integrity (integritas)</li>
- <li><b>T</b> → Tenacity (ketekunan)</li>
- <li><b>A</b> → Adaptability (kemampuan beradaptasi)</li>
- <li><b>I</b> → Innovation (inovasi)</li>
- <li><b>愛 (Ai)</b> → Cinta, fondasi dari semua proses belajar</li>
- </ul>
-
- <h2>📖 Filosofi Gitai</h2>
- <p>
- Setiap commit adalah langkah kecil menuju kemajuan.<br>
- Branching adalah pilihan jalan hidup.<br>
- Merge adalah harmoni dari perbedaan.<br>
- Error bukan kegagalan, melainkan guru terbalik.
- </p>
-
- <h2>📜 Sejarah Awal Gitai</h2>
- <p>
- Nama <b>Gitai</b> lahir dari sebuah pencarian sederhana: bagaimana menggabungkan dunia teknologi dengan nilai-nilai kehidupannya.<br>
- Awalnya hanya sebuah ide kecil untuk membuat tutorial GitHub, namun seiring waktu berkembang menjadi simbol perjalanan belajar.<br>
- <b>Git</b> mewakili dunia version control, disiplin, dan kolaborasi, sementara <b>Ai (愛)</b> dari Jepang melambangkan cinta, kesabaran, dan rasa hormat.<br>
- Keduanya berpadu, membentuk filosofi baru: <i>belajar teknologi dengan hati</i>.
- </p>
-
- <!-- Sakura jatuh -->
- <skrip>
- function createSakura() {
- const sakura = document.createElement('div');
- sakura.classList.add('sakura');
- sakura.style.left = Math.random() * window.innerWidth + 'px';
- sakura.style.animationDuration = (5 + Math.random() * 5) + 's';
- sakura.innerHTML = '🌸';
- document.body.appendChild(sakura);
- setTimeout(() => { sakura.remove(); }, 10000);
+    /* Neon title */
+    .hero{
+      position:absolute;
+      top:50%;left:50%;
+      transform:translate(-50%,-50%);
+      text-align:center;
+      z-index:10;
+      width:90%;
+      max-width:700px;
     }
- setInterval(createSakura, 300);
- </skrip>
-</badan>
+    .neon{
+      font-size:clamp(2.2rem,7vw,4.5rem);
+      position:relative;
+      letter-spacing:.08em;
+      animation:flicker 2s infinite alternate;
+    }
+    .neon::before,
+    .neon::after{
+      content:attr(data-text);
+      position:absolute;
+      top:0;left:0;
+      width:100%;height:100%;
+    }
+    .neon::before{
+      animation:glitch 1s infinite;
+      color:#ff00c1;
+      z-index:-1;
+    }
+    .neon::after{
+      animation:glitch 1s .5s infinite;
+      color:#00fff9;
+      z-index:-2;
+    }
+    @keyframes flicker{
+      0%,100%{opacity:1}
+      45%{opacity:.8}
+      50%{opacity:.5}
+      55%{opacity:1}
+    }
+    @keyframes glitch{
+      0%{transform:translate(0)}
+      20%{transform:translate(-3px,3px)}
+      40%{transform:translate(-3px,-3px)}
+      60%{transform:translate(3px,3px)}
+      80%{transform:translate(3px,-3px)}
+      100%{transform:translate(0)}
+    }
+
+    /* Subtitle styling */
+    .subtitle{
+      margin-top:1.2rem;
+      font-size:1.05rem;
+      line-height:1.6;
+      opacity:0;
+      animation:fadeIn 1s 1s forwards;
+    }
+    @keyframes fadeIn{
+      to{opacity:.85}
+    }
+
+    /* Sakura petal */
+    .petal{
+      position:absolute;
+      width:var(--size);
+      height:var(--size);
+      background:radial-gradient(circle at 30% 30%,#ffeef8,#ffb7c5);
+      border-radius:0 100% 0 100%;
+      opacity:.8;
+      animation:fall linear infinite;
+      pointer-events:none;
+    }
+    @keyframes fall{
+      0%{transform:translateY(-10vh) rotate(0deg)}
+      100%{transform:translateY(110vh) rotate(360deg)}
+    }
+
+    /* Bokeh orbs */
+    .bokeh{
+      position:absolute;
+      border-radius:50%;
+      filter:blur(40px);
+      opacity:.25;
+      animation:float 20s infinite ease-in-out;
+    }
+    @keyframes float{
+      0%,100%{transform:translate(0,0)}
+      33%{transform:translate(30px,-30px)}
+      66%{transform:translate(-20px,20px)}
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <h1 class="neon" data-text="Gitai">Gitai</h1>
+    <p class="subtitle">
+ ギタイは名前ではありませんφ<br>
+ Gitai bukan sekadar nama.<br><br>
+ Ia adalah perpaduan antara teknologi dan filosofi:<br>
+ G → Pertumbuhan (Pertumbuhan)<br>
+ I → Integrity (Integritas)<br>
+ T → Tenacity (Ketekunan)<br>
+ A → Adaptability (Kemampuan beradaptasi)<br>
+ I → Inovasi (Inovasi)<br>
+ 愛 (Ai) → Cinta, fondasi dari semua proses belajar.
+    </p>
+  </bagian>
+
+  <div id="sakura"></div>
+
+  <script>
+    /* Hasilkan kelopak sakura */
+    konstanta sakura=dokumen.dapatkan Elemen ById(‘sakura’);
+    konstanta count=jendela.lebar Dalam<768?25:50;
+    untuk(let i=0;i<count;i++){
+      konstanta p=dokumen.buatElemen(‘div’);
+      p.nama Kelas=‘petal’;
+      konstanta ukuran=Matematika.acak()*12+8;
+      p.gaya.setProperti('--ukuran',ukuran+‘px’);
+      p.gaya.kiri=Matematika.acak()*100+'%';
+      p.gaya.durasi Animasi=(Matematika.acak()*4+6)+'s';
+      p.gaya.penundaan Animasi=Matematika.acak()*5+'s';
+      sakura.tambahkan Anak(p);
+    }
+
+    /* Hasilkan lampu bokeh */
+    konstanta colors=['#ff4dd3','#00f0ff','#ffea00','#9d4dff'];
+    untuk(let i=0;i<6;i++){
+      konstanta b=dokumen.buatElemen(‘div’);
+      b.nama Kelas=‘bokeh’;
+      konstanta dim=Matematika.acak()*200+100;
+      b.gaya.lebar=b.gaya.height=dim+‘px’;
+      b.gaya.latar belakang=colors[i%colors.length];
+      b.gaya.top=Matematika.acak()*100+'%';
+      b.gaya.kiri=Matematika.acak()*100+'%';
+      b.gaya.durasi Animasi=(Matematika.acak()*10+15)+'s';
+      dokumen.body.tambahkan Anak(b);
+    }
+  </script>
+</body>
 </html>
